@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Teste do site.</h1>
+
+<h2>Descubra a sua idade!</h2>
+<h3>Coloque a baixo o ano que voçê nasceu</h3>
+
+<input id="ano" type="number">
+
+<button onclick="calcular()">Testar</button>
+
+<p id="resultado"></p>
+
+<script>
+
+function calcular() {
+
+    let ano = document.getElementById("ano").value;
+
+    if (ano > 2026) {
+        document.getElementById("resultado").textContent = "Esse ano ainda não aconteceu!";
+    }else {
+    let idade = 2026 - ano;
+    document.getElementById("resultado").textContent =
+        "Você tem aproximadamente " + idade + " anos.";
+}
+
+}
+
+</script>
+
+</body>
+</html>
